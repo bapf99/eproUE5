@@ -1,13 +1,15 @@
-package de.thbingen.epro.vl5;
+package de.thbingen.epro.vl5.entities;
+
+import de.thbingen.epro.vl5.entities.AbstractEntity;
+import de.thbingen.epro.vl5.entities.Group;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "\"user\"")
-public class User extends AbstractEntity{
+public class User extends AbstractEntity {
     public String getFirstName() {
         return firstName;
     }

@@ -1,11 +1,11 @@
-package de.thbingen.epro.vl5;
+package de.thbingen.epro.vl5.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
 @Entity
-public class Right extends AbstractEntity{
+public class Group extends AbstractEntity {
 
     public String getName() {
         return name;
@@ -23,29 +23,18 @@ public class Right extends AbstractEntity{
         this.description = description;
     }
 
-    public String getKey() {
-        return key;
+    public List<Right> getRights() {
+        return rights;
     }
 
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public List<Group> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(List<Group> groups) {
-        this.groups = groups;
+    public void setRights(List<Right> rights) {
+        this.rights = rights;
     }
 
     private String name;
-
     private String description;
 
-    private String key;
-
     @ManyToMany
-    private List<Group> groups;
+    private List<Right> rights;
 
 }

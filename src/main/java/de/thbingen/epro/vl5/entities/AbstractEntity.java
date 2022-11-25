@@ -1,4 +1,4 @@
-package de.thbingen.epro.vl5;
+package de.thbingen.epro.vl5.entities;
 
 import javax.persistence.*;
 
